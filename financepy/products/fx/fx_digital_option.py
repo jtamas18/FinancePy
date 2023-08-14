@@ -14,12 +14,13 @@ from ...utils.date import Date
 # from ...products.fx.FinFXModelTypes import FinFXModel
 from ...models.black_scholes import BlackScholes
 from ...utils.helpers import check_argument_types
+from ...products.fx.fx_option import FXOption
 from ...utils.global_types import OptionTypes
 
 ###############################################################################
 
 
-class FXDigitalOption:
+class FXDigitalOption(FXOption):
 
     def __init__(self,
                  expiry_date: Date,
