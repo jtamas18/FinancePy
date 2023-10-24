@@ -17,6 +17,8 @@ from ...utils.helpers import check_argument_types
 from ...products.fx.fx_option import FXOption
 from ...utils.global_types import OptionTypes
 
+###############################################################################
+
 class FXDoubleDigitalOption(FXOption):
 
     def __init__(self,
