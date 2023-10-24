@@ -94,4 +94,15 @@ class TouchOptionTypes(Enum):
     DOWN_AND_OUT_ASSET_OR_NOTHING = 11,  # S0>H pays S(T) at T if S>H for t < T
     UP_AND_OUT_ASSET_OR_NOTHING = 12     # S0<H pays S(T) at T if S<H for t < T
 
+###############################################################################
 
+class DoubleTouchOptionTypes(Enum):
+    KNOCK_IN = 1,           # pays $1 at T if S > H_upper or S < H_lower at 
+                            # any time between 0 and T
+    KNOCK_OUT = 2,          # pays $1 at T unless S > H_upper or S < H_lower at 
+                            # any time between 0 and T
+    ASYMMETRICAL = 3,       # knocked-out if S touches H_upper, pays 
+                            # $1 immediately if S touches H_lower
+
+
+###############################################################################
